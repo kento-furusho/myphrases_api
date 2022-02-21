@@ -41,7 +41,9 @@ module App
     # i18nでのデフォルトロケールファイルの設定
     config.i18n.default_locale = :ja
 
-    
+    # 追加
+    # $LOAD_PATHにautoload pathを追加しない(Zeitwerk有効時false推奨)
+    config.add_autoload_paths_to_load_path = false
 
     # Only loads a smaller set of middleware suitable for API only apps.
     # Middleware like session, flash, cookies can be added back manually.
