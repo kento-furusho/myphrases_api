@@ -36,6 +36,9 @@ gem 'bcrypt', '~> 3.1', '>= 3.1.16'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  # 追加
+  # デバッグbinding.pry Doc: https://github.com/deivid-rodriguez/pry-byebug
+  gem 'pry-byebug', '~> 3.9'
 end
 
 group :development do
@@ -57,5 +60,8 @@ gem 'net-imap', require: false
 gem 'devise'
 gem 'devise_token_auth'
 
+# deviseのemail validationを改良
+# DOC:https://qiita.com/mokichi/items/acd0f3738ca5cb0fb90a
+gem 'email_validator'
 
 gem 'psych', '~> 3.1'
