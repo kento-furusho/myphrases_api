@@ -24,7 +24,8 @@ class User < ActiveRecord::Base
                          with: VALID_PASSWORD_REGEX,
                          message: :invalid_password,
                          allow_blank: true
-                       }
+                       },
+                       allow_blank: true
   private
   def downcase_email
     self.email.downcase! if email
