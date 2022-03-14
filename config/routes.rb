@@ -5,7 +5,8 @@ Rails.application.routes.draw do
           registrarions: '/api/v1/registrations',
           sessions: 'devise_token_auth/sessions'
         }
-        resources :users, only:[:index]
-    end
+        resources :users, only:[:index, :show]
+      end
+      resources :users
   end
 end
